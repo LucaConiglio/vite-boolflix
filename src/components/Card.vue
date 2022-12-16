@@ -48,6 +48,16 @@ export default {
 <style lang="scss">
   .card{
   overflow: hidden;
+
+  ::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+ background-color: rgba(0, 0, 0, 0.804);
+ border-radius: 10px;
+
+}
   
   img{
     z-index: 2;
