@@ -19,6 +19,7 @@
 </template>
 <script>
 export default {
+  //prendo la prop dal main dichiarandola come un oggetto
   props: {
     poster : {
       type: Object,
@@ -31,15 +32,18 @@ export default {
     }
   },
   computed : {
-    
+    //funzione getflag dichiariamo una variabile che é un oggetto con dentro
+    // chiave icon e valore dopo di ciò facciamo degli if perché le lingue delle
+    //chiamate api non corrispondono a quelle della libreria delle bandiere quindi
+    //cambiamo manualmente
     getFlag(){
-           let toReturn = { icon :`fi fi-${this.poster.original_language}`};
+           let bandiere = { icon :`fi fi-${this.poster.original_language}`};
            if (this.poster.original_language == "en"){
-            toReturn = { icon: "fi fi-gb"}
+            bandiere = { icon: "fi fi-gb"}
            }if (this.poster.original_language == "ja"){
-            toReturn = { icon: "fi fi-jp"}
+            bandiere = { icon: "fi fi-jp"}
            };
-           return  toReturn
+           return  bandiere
         },
 
   }
@@ -48,11 +52,11 @@ export default {
 <style lang="scss">
   .card{
   overflow: hidden;
-
+//questa serve per la larghezza della scroll
   ::-webkit-scrollbar{
     width: 7px;
 }
-
+// per il layaout della scroll
 ::-webkit-scrollbar-thumb{
  background-color: rgba(0, 0, 0, 0.804);
  border-radius: 10px;

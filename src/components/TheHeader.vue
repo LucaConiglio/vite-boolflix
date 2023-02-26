@@ -23,13 +23,14 @@ export default {
       searchText : "",
     }
   },
-  //emits : ["search"],
+  //emits : ["PerformSearch"],
   methods : {
     onSearchClick () {
       this.store.searchText = this.searchText,
 
       fetchMovies();
       fetchTvSeries();
+     // this.$emit("performSearch")
 
       this.store.show = true
       if(this.store.searchText === "") {

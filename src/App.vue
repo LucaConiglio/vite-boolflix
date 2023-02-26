@@ -11,6 +11,12 @@ export default {
       store
     }
   },
+methods: {
+  // onSearch() {
+    //fetchMovies();
+   // fetchTvSeries();
+  //}
+},
 
   computed :{
     
@@ -22,7 +28,7 @@ export default {
 
 <template>
   <Loader v-if="store.loading"></Loader>
-  <TheHeader></TheHeader>
+  <TheHeader></TheHeader> <!--@performSearch="onSearch"-->
   <TheMain></TheMain>
 
 </template>

@@ -9,8 +9,10 @@ export const store = reactive ({
 
  tvSeries : [],
 
+ //funzionalità extra
+//gestisce gli H2 film e series
  show : false,
-
+//gestisce il loader
  loading : false
 
 })
